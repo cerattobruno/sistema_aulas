@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django import template
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -55,7 +58,9 @@ ROOT_URLCONF = 'gestionaulas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'aulas/template',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

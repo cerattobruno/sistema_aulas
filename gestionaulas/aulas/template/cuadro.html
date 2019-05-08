@@ -1,0 +1,33 @@
+
+<header>
+    <h1 align="center">Aulas Disponibles</h1>
+    <br>
+</header>
+
+<table class="egt" border="1" style="margin: 0 auto ;">
+
+  <tr>
+
+    <th scope="row">Horarios/Aulas</th>
+
+    {% for aula in aulas %}
+
+      <th>{{aula.nro_aula}}{{aula.sector}}</th>
+
+    {% endfor %}
+
+  </tr>
+
+    {% for h, materias in horarios.items %}
+
+      <tr>
+
+        <th>{{h}}</th>
+          {% for m in materias %}
+            <td>{{ m }}</td>
+          {% endfor %}
+      </tr>
+
+    {% endfor %}
+
+</table>
