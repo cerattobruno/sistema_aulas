@@ -10,7 +10,6 @@ class Aula(models.Model):
         return "{} - {}".format(self.sector, self.nro_aula)
 
 
-
 class Carrera(models.Model):
     nombre = models.CharField(max_length=250)
 
@@ -49,8 +48,9 @@ class Disponibilidad(models.Model):
     materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
     horario_inicio = models.TimeField()
     horario_fin = models.TimeField()
+    dia = models.IntegerField(default=0)
 
     def __str__(self):
-        return "{} - {} - {} - {}".format(self.aula, self.materia, self.horario_inicio, self.horario_fin)
+        return "{} - {} - {} - {} - {}".format(self.aula, self.materia, self.horario_inicio, self.horario_fin, self.dia)
 
 

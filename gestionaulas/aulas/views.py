@@ -18,3 +18,7 @@ def horarios(request):
    horarios = {"17:00":h17, "17:40":h17_40, "18:20":h18_20, "19:00":h19, "19:40":h19_40, "20:20":h20_20,
                "21:00":h21, "21:40":h21_40, "22:20":h22_20, "23:00":h23}
    return render(request, "cuadro.html", {"aulas":Aula.objects.all(), "horarios":horarios})
+
+
+def index(request):
+   return render(request, "index.html")
