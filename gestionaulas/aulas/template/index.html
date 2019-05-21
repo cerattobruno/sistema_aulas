@@ -1,16 +1,26 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sistema de Aulas</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/aulas.css' %}">
+
 </head>
 <body>
-    <ul>
-        <li>Lunes</li>
-        <li>Martes</li>
-        <li>Miercoles</li>
-        <li>Jueves</li>
-        <li>Viernes</li>
-    </ul>
+        <div class="centrar">
+            <h1>Distribución de aulas</h1>
+            <ul>
+                <li><a href="https://www.w3schools.com">Lunes</a></li>
+                <li><a href="https://www.w3schools.com">Martes</a></li>
+                <li><a href="https://www.w3schools.com">Miercoles</a></li>
+                <li><a href="https://www.w3schools.com">Jueves</a></li>
+                <li><a href="https://www.w3schools.com">Viernes</a></li>
+            </ul>
+        </div>
 </body>
 </html>
